@@ -1,6 +1,4 @@
-from sys import argv
 
-scr_name, input=argv
 class Limited_var:
 	max_=0 # Maximum assignable value
 	min_=0 # Minimum assignable value
@@ -14,7 +12,13 @@ class Limited_var:
 		return self.value
 	
 	def set(self,val):
-		self.__value=max(min(self.max_,val),self.min_);
+		if (type(val) is str):
+			self.__value=0
+		else:	
+			self.__value=max(min(self.max_,val),self.min_);
+		
+	def set_lim(self,*val): # setter limits
+		min,max=val
 		
 	def get(self):
 		return self.__value
@@ -30,8 +34,5 @@ class Limited_var:
 		
 	def __radd__(self, other):
 		return self.__value + other
-lim=Limited_var(0,5,0)
-lim.set(-10)
-a=lim
-print (lim)
+
 
