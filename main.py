@@ -3,6 +3,6 @@ from checker import do_test
 
 print "Main called !"
 
-a=Limited_var(-5,5,1)
+a=Limited_var(-5,57,1)
 print a
 do_test(a)

@@ -15,9 +15,10 @@ class Limited_var:
 		if (type(val) is str):
 			self.__value=0
 		else:	
-			self.__value=max(min(self.max_,val),self.min_);
+			self.__value=float(max(min(self.max_,val),self.min_));
 		
 	def set_lim(self,*val): # setter limits
+		
 		min,max=val
 		
 	def get(self):
